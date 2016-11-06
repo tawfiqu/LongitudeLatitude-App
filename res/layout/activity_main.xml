@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >    
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >	    
+	    
+	    <Button
+	        android:id="@+id/btn_find"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/et_location"
+	        android:layout_alignParentRight="true"
+	        android:background="@drawable/buttonfield"
+	        android:gravity="center"
+	        android:text="@string/str_btn_find"
+	        android:textAlignment="gravity" />
+	    
+	    <EditText
+	        android:id="@+id/et_location"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/btn_find"
+	        android:background="@drawable/textfield"
+	        android:hint="@string/hnt_et_location" />
+	    
+    </RelativeLayout>    
+
+    <fragment 
+		android:id="@+id/map"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		class="com.google.android.gms.maps.SupportMapFragment" />
+
+</LinearLayout>
